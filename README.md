@@ -51,7 +51,7 @@ The codes depend on Python 3.8.10. Before using the tool, some dependencies need
 
 ---
 
-### 📊 model_type: The types of uncertainty estimation models available for our experiments are options "vanilla", "bayesian", "mcdropout", and "deepensemble".
+### 📊 model_type: The types of uncertainty estimation models available for our experiments are options `vanilla`, `bayesian`, `mcdropout`, `deepensemble`.
 
 ---
       

@@ -27,23 +27,36 @@ The codes depend on Python 3.8.10. Before using the tool, some dependencies need
 
 #### Hyperparameters:
       
-      noise_type: This parameter specifies the type of noise in the training data along with relevant configuration details. The naming convention generally follows the format:
-     #### 1. Random Noise
+      
+### 📊 Noise Types
 
-     - **Example:** `random_1_drebin_10`
-     - **Explanation:**
-       - `random`: Indicates that the noise type is random noise.
-       - `1`: Represents the first experiment (each experiment is conducted three times to ensure stability).
-       - `drebin`: Specifies the source dataset, in this case, the Drebin dataset.
-       - `10`: Indicates the noise rate is 10%.
-     
-     #### 2. EM Noise
-     
-     - **Example:** `thr_1_18`
-     - **Explanation:**
-       - `thr`: Represents EM noise (threshold-based noise).
-       - `1`: Represents the first experiment.
-       - `18`: Indicates the VirusTotal threshold is set to 18.
+#### 1️⃣ Random Noise
+
+- **Example:** `random_1_drebin_10`
+- **Explanation:**
+  - **`random`**: Indicates that the noise type is **random noise**.
+  - **`1`**: Represents the **first experiment** (each experiment is conducted **three times** for stability).
+  - **`drebin`**: Specifies the **source dataset**, in this case, the **Drebin dataset**.
+  - **`10`**: Indicates the **noise rate** is **10%**.
+
+---
+
+#### 2️⃣ EM Noise
+
+- **Example:** `thr_1_18`
+- **Explanation:**
+  - **`thr`**: Represents **EM noise** (*threshold-based noise*).
+  - **`1`**: Represents the **first experiment**.
+  - **`18`**: Indicates the **VirusTotal threshold** is set to **18**.
+
+---
+
+### ⚡ Usage Examples
+
+```bash
+python train.py --noise_type random_1_drebin_10
+python train.py --noise_type thr_1_18
+
       
       model_type: The types of uncertainty estimation models available for our experiments are options "vanilla", "bayesian", "mcdropout", and "deepensemble".
 

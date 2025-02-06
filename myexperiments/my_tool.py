@@ -16,20 +16,16 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('-noise_type', '-nt', type=str, default='thr_3_10')
     parser.add_argument('-detection_model', '-dm', type=str, default='if')
-    parser.add_argument('-algorithm_hyper', '-ah', type=float, default=0.1)
     parser.add_argument('-svm_kernel', '-sk', type=str, default='rbf')  # ['linear'、'poly'、'rbf'、'sigmoid']
     args = parser.parse_args()
     detection_model = args.detection_model
     svm_kernel = args.svm_kernel
-    algorithm_hyper = args.algorithm_hyper
     noise_type = args.noise_type
 
     if not os.path.isdir('my_tool_difference/dbscan/'):
         os.makedirs('my_tool_difference/dbscan/')
     if not os.path.isdir('my_tool_difference/isolation_forest/'):
         os.makedirs('my_tool_difference/isolation_forest/')
-    if not os.path.isdir('my_tool_difference/one_class_svm/'):
-        os.makedirs('my_tool_difference/one_class_svm/')
 
     print('-----------------------------------------------------------------------------------')
     print(

@@ -28,8 +28,7 @@ if __name__ == '__main__':
         os.makedirs('my_tool_difference/isolation_forest/')
 
     print('-----------------------------------------------------------------------------------')
-    print(
-        '-------------' + noise_type + '--------------------------')
+    print('-------------' + noise_type + '--------------------------')
     print('-----------------------------------------------------------------------------------')
     data_filenames, gt_labels, noise_labels, bayesian_prob = data_process(
         noise_type, model_type='bayesian')

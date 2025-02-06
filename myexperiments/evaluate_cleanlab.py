@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*- 
 # @Time : 2024/5/7 15:30 
 # @Author : DirtyBoy 
-# @File : samples_diff_plot.py
+# @File : evaluate_cleanlab.py
 import numpy as np
 from utils import data_process, evaluate_dataset_noise, prob2psx, evaluate_cleanlab
 from sklearn.metrics import accuracy_score

@@ -4,7 +4,7 @@
 This repository is associated with our FSE'25 paper titled **Mitigating Emergent Malware Label Noise in DNN-Based Android Malware Detection**.
 In this paper, we first explore the characteristics of label noise in real-world Android malware datasets, which we refer to as EM label noise. Then, we design this tool to remove EM label noise. We start by assessing the model's uncertainty regarding the samples in the dataset, and based on these uncertainties, we use anomaly detection algorithms to eliminate this label noise.
 
-We use [AVPASS](https://github.com/sslab-gatech/avpass) to obfuscate malware, and the state-of-the-art (SOTA) tool is [MalWhiteOut](https://github.com/MalTools/MalWhiteout), which includes malware detectors such as [Drebin](https://github.com/annamalai-nr/drebin), [CSBD](https://github.com/annamalai-nr/csbd), and [MalScan](https://github.com/malscan-android/MalScan).
+We use [AVPASS](https://github.com/sslab-gatech/avpass) to obfuscate malware, and the state-of-the-art (SOTA) tool are [Cleanlab](https://github.com/cleanlab/cleanlab) and [MalWhiteout](https://github.com/MalTools/MalWhiteout), MalWhiteout includes malware detectors such as [Drebin](https://github.com/annamalai-nr/drebin), [CSBD](https://github.com/annamalai-nr/csbd), and [MalScan](https://github.com/malscan-android/MalScan).
 
 
 ## Prerequisites:

@@ -1,0 +1,8 @@
+*pyc
+*apk
+*data
+*xml
+*~
+*swp
+data/apks/*
+.idea/*

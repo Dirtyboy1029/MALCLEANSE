@@ -1,0 +1,19 @@
+[DEFAULT]
+project_root = /home/lhd/MalCleanse/Training/
+
+
+[metadata]
+mwo_data_pool = /home/public/rmt/heren/experiment/cl-exp/LHD_apk/malwhiteout_naive_pool/
+naive_data_pool = /home/public/rmt/heren/experiment/cl-exp/LHD_apk/naive_pool
+
+
+[dataset]
+dataset_name = dataset
+intermediate_directory = %(project_root)s/config
+drebin_malware_dir = /home/public/rmt/heren/experiment/cl-exp/LHD_apk/apk/Robust_model/trainset/drebin/malware
+drebin_benware_dir =/home/public/rmt/heren/experiment/cl-exp/LHD_apk/apk/Robust_model/trainset/drebin/benign
+malradar_malware_dir = /home/public/rmt/heren/experiment/cl-exp/LHD_apk/apk/Robust_model/trainset/malradar/malware
+malradar_benware_dir = /home/public/rmt/heren/experiment/cl-exp/LHD_apk/apk/Robust_model/trainset/malradar/benign
+MalDroid_2020_malware_dir = /home/share/nfs/heren/experiment/cl-exp/LHD_apk/CICDataset/Label_Denoise/benign
+MalDroid_2020_benware_dir = /home/share/nfs/heren/experiment/cl-exp/LHD_apk/CICDataset/Label_Denoise/benign
+

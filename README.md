@@ -66,13 +66,13 @@ The codes depend on Python 3.8.10. Before using the tool, some dependencies need
 
      cd Training 
 
-     python train_noise_model.py 
+     python3 train_noise_model.py -mt vanilla -nt thr_1_10
 
 
 #### 2. Label Noise detection：We calculate the average cross-entropy of these 10 prediction probabilities and use it as a quantification metric for uncertainty. Then, using anomaly detection algorithms, the anomalous samples are identified as label noise samples.
 
      cd myexperiments
 
-     python my_tool.py 
+     python3 my_tool.py -nt thr_1_10 -detection_model if
 
 

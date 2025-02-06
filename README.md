@@ -1,7 +1,7 @@
 # MALCLEANSE
 
 ## Overview
-This repository is associated with our paper titled **Mitigating Emergent Malware Label Noise in DNN-Based Android Malware Detection**.
+This repository is associated with our FSE'25 paper titled **Mitigating Emergent Malware Label Noise in DNN-Based Android Malware Detection**.
 In this paper, we first explore the characteristics of label noise in real-world Android malware datasets, which we refer to as EM label noise. Then, we design this tool to remove EM label noise. We start by assessing the model's uncertainty regarding the samples in the dataset, and based on these uncertainties, we use anomaly detection algorithms to eliminate this label noise.
 
 ## Prerequisites:
@@ -27,10 +27,8 @@ The codes depend on Python 3.8.10. Before using the tool, some dependencies need
 
 #### Hyperparameters:
       
-      train_data_type:  The dataset required for the experiments, chosen for our study, is "malradar".
-      noise_type: The names of individual detection engines used in our experiments are 'F-Secure', 'Ikarus', 'Sophos', 'Alibaba', and 'ZoneAlarm'.  If targeting random label noise, it is set as "random".
+      noise_type: 
       model_type: The types of uncertainty estimation models available for our experiments are options "vanilla", "bayesian", "mcdropout", and "deepensemble".
-      noise_hyper: If the parameter "noise_type" is set to "random," it can be chosen as a noise ratio. Otherwise, it is fixed at 0.
 
 #### 1. Estimate uncertainty：We use Variational Bayesian Inference (VBI) to perform 5-fold cross-validation on the dataset with label noise to evaluate the uncertainty of each sample. Specifically, we generate 10 prediction probabilities for each sample. The differences among these 10 prediction probabilities represent the uncertainty for that sample.
 

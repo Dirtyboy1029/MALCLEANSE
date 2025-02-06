@@ -72,14 +72,14 @@ if __name__ == '__main__':
 
     if detection_model == 'if':
         isolation_forest = IsolationForest(n_estimators=100,
-                                           contamination=0.055)
+                                           contamination=eva_noise_ratio)
         isolation_forest.fit(train_data)
         outliers_isolation_forest = isolation_forest.predict(train_data)
         np.save('my_tool_difference/isolation_forest/' + noise_type,
                 outliers_isolation_forest)
     elif detection_model == 'dbscan':
-        dbscan = DBSCAN(eps=0.07,
-                        min_samples=800)  # len(np.where(noise_labels == 0)[0]) - len(np.where(gt_labels == 0)[0])
+        dbscan = DBSCAN(eps=0.1,
+                        min_samples=eva_noise_num)  
         dbscan.fit(train_data)
         outliers_dbscan = dbscan.labels_
         np.save('my_tool_difference/dbscan/' + noise_type, outliers_dbscan)

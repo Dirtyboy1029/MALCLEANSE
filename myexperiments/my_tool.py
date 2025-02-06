@@ -9,7 +9,6 @@ from metrics_utils import *
 import argparse, os
 from sklearn.cluster import DBSCAN
 from sklearn.ensemble import IsolationForest
-from sklearn.svm import OneClassSVM
 from sklearn.neighbors import LocalOutlierFactor
 
 if __name__ == '__main__':

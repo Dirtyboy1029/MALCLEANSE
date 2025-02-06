@@ -25,7 +25,7 @@ def save_logger(base_path, vanilla_prob, type, fold=0):
     np.save(os.path.join(base_path, type + '/prob/fold' + str(fold + 1)), vanilla_prob)
 
 
-def main_deepdrebin(model_type, noise_type, EPOCH=30, feature_type='drebin'):
+def main_deepdrebin(model_type, noise_type, EPOCH=30, feature_type='data'):
     if model_type == 'vanilla':
         model_architecture = Vanilla
     elif model_type == 'bayesian':
@@ -34,8 +34,6 @@ def main_deepdrebin(model_type, noise_type, EPOCH=30, feature_type='drebin'):
         model_architecture = MCDropout
     elif model_type == 'deepensemble':
         model_architecture = DeepEnsemble
-    elif model_type == 'wdeepensemble':
-        model_architecture = WeightedDeepEnsemble
     else:
         model_architecture = None
     output_path = 'output/' + noise_type
@@ -116,10 +114,6 @@ if __name__ == '__main__':
     args = parser.parse_args()
     model_type = args.model_type
     noise_type = args.noise_type
-    feature_type = 'data'
-    ratio = 15
-    for model_type in ['deepensemble']:
-        for noise_type in ['random_2_malradar_' + str(ratio), 'random_3_malradar_' + str(ratio)]:
-            main_deepdrebin(model_type, noise_type, EPOCH=30, feature_type=feature_type)
+    main_deepdrebin(model_type, noise_type)
 
-    ##CUDA_VISIBLE_DEVICES=6,7 python3 train_noise_model.py
+    ##CUDA_VISIBLE_DEVICES=0 python3 train_noise_model.py -mt vanilla -nt thr_1_10

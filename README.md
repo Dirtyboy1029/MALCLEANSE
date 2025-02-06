@@ -27,7 +27,24 @@ The codes depend on Python 3.8.10. Before using the tool, some dependencies need
 
 #### Hyperparameters:
       
-      noise_type: 
+      noise_type: This parameter specifies the type of noise in the training data along with relevant configuration details. The naming convention generally follows the format:
+     #### 1. Random Noise
+
+     - **Example:** `random_1_drebin_10`
+     - **Explanation:**
+       - `random`: Indicates that the noise type is random noise.
+       - `1`: Represents the first experiment (each experiment is conducted three times to ensure stability).
+       - `drebin`: Specifies the source dataset, in this case, the Drebin dataset.
+       - `10`: Indicates the noise rate is 10%.
+     
+     #### 2. EM Noise
+     
+     - **Example:** `thr_1_18`
+     - **Explanation:**
+       - `thr`: Represents EM noise (threshold-based noise).
+       - `1`: Represents the first experiment.
+       - `18`: Indicates the VirusTotal threshold is set to 18.
+      
       model_type: The types of uncertainty estimation models available for our experiments are options "vanilla", "bayesian", "mcdropout", and "deepensemble".
 
 #### 1. Estimate uncertainty：We use Variational Bayesian Inference (VBI) to perform 5-fold cross-validation on the dataset with label noise to evaluate the uncertainty of each sample. Specifically, we generate 10 prediction probabilities for each sample. The differences among these 10 prediction probabilities represent the uncertainty for that sample.

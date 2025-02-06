@@ -30,7 +30,7 @@ The codes depend on Python 3.8.10. Before using the tool, some dependencies need
 
 ##  Usage
 
-#### Hyperparameters:
+#### 0. Hyperparameters:
       
       
 ### 📊 noise_type: this parameter specifies the type of noise in the training data along with relevant configuration details. The naming convention follows the format:
